@@ -15,9 +15,9 @@ export default function App() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           {/* User's uploaded video (needs to be placed in public/hero-video.mp4) */}
-          <source src="./img/219181_960x540.mp4" type="video/mp4" />
+          <source src="https://www.jaist.ac.jp/~s2630031/img/219181_960x540.mp4" type="video/mp4" />
           {/* Fallback pattern */}
-          <source src="./img/219181_960x540.mp4" type="video/mp4" />
+          <source src="https://www.jaist.ac.jp/~s2630031/img/219181_960x540.mp4" type="video/mp4" />
         </video>
 
         {/* Dark overlay for text readability */}
@@ -95,7 +95,7 @@ export default function App() {
             <div className="flex flex-col gap-6 lg:mt-8">
               <div className="aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1566421389772-5b967d1dfcfb?auto=format&fit=crop&w=600&q=80"
+                  src="https://www.jaist.ac.jp/~s2630031/img/PXL_20240721_085107459.MP.jpg"
                   alt="Street cafe"
                   className="w-full h-full object-cover"
                 />
@@ -387,12 +387,15 @@ export default function App() {
             </div>
             <div className="flex flex-col gap-2">
               <h4 className="font-bold text-lg">Email</h4>
-              <p className="text-gray-400 text-sm">hello@reallygreatsite.com</p>
+              <p className="text-gray-400 text-sm">s2630031@jaist.ac.jp</p>
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-bold text-lg">Social</h4>
               <div className="flex items-center gap-4">
-                <a href="#" className="hover:text-brand-light transition-colors">
+                <a
+                  href="https://www.facebook.com/nozomi.sakai.555"
+                  className="hover:text-brand-light transition-colors"
+                >
                   <Facebook className="w-5 h-5 fill-current" />
                 </a>
                 <a href="#" className="hover:text-brand-light transition-colors">
