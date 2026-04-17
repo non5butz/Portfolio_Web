@@ -15,7 +15,7 @@ export default function App() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           {/* User's uploaded video (needs to be placed in public/hero-video.mp4) */}
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="./img/219181_960x540.mp4" type="video/mp4" />
           {/* Fallback pattern */}
           <source src="./img/219181_960x540.mp4" type="video/mp4" />
         </video>
