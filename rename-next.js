@@ -76,6 +76,8 @@ function main() {
         .replace(/"_next\//g, '"assets/')
         .replace(/\.\/_next\//g, "./assets/")
         .replace(/"\/images\//g, '"./images/')
+        .replace(/"\/icon/g, '"./icon')
+        .replace(/"\/apple-icon/g, '"./apple-icon')
 
       // Replace problematic chunk references
       renameMap.forEach(({ oldName, newName }) => {
