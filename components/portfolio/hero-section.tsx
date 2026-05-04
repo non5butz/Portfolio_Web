@@ -1,6 +1,17 @@
 "use client"
 
 import { ArrowDown } from "lucide-react"
+import dynamic from "next/dynamic" // next/dynamicをインポート
+// import Spline from "@splinetool/react-spline"
+
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-full text-muted-foreground">
+      Loading 3D...
+    </div>
+  ),
+})
 
 export function HeroSection() {
   const scrollToNext = () => {
@@ -13,6 +24,15 @@ export function HeroSection() {
       className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden"
       style={{ backgroundColor: "lab(98.26 0 0)" }}
     >
+      {/* 3D Background */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Spline
+          scene="https://prod.spline.design/b4IBMd6TnUFXGVlT/scene.splinecode"
+          onLoad={() => console.log("✅ Spline loaded successfully")}
+          onError={(e) => console.error("❌ Spline error:", e)}
+        />
+      </div>
+
       {/* Gradient accent line */}
       <div
         className="absolute top-0 left-0 w-full h-1 z-10"
@@ -21,7 +41,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="max-w-4xl relative z-10">
+      <div className="max-w-4xl relative z-10 pointer-events-none">
         {/* Tagline */}
         <p className="text-muted-foreground tracking-widest text-sm uppercase mb-6">
           UI/UX Designer & Web Engineer
