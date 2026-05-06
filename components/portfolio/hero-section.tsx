@@ -49,7 +49,7 @@ export function HeroSection() {
       style={{ backgroundColor: "lab(98.26 0 0)" }}
     >
       {/* URLを変数（splineSceneUrl）に変更 */}
-      <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+      <div className="absolute inset-0 w-full h-full z-0">
         <Spline scene={splineSceneUrl} />
       </div>
 
@@ -61,7 +61,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="max-w-4xl relative z-10 pointer-events-none">
+      <div className="max-w-4xl relative z-10 pointer-events-none select-none">
         {/* Tagline */}
         <p className="text-muted-foreground tracking-widest text-sm uppercase mb-6">
           UI/UX Designer & Web Engineer
