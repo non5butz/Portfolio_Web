@@ -2,7 +2,7 @@
 
 import { ArrowDown } from "lucide-react"
 import dynamic from "next/dynamic" // next/dynamicをインポート
-// import Spline from "@splinetool/react-spline"
+import { useState, useEffect } from "react"
 
 const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
@@ -14,23 +14,43 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 })
 
 export function HeroSection() {
+  // SPサイズかどうかを判定する状態（ステート）を定義
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    // 画面幅をチェックする関数（768px未満をSPとする）
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    // 初回マウント時にチェック
+    checkIsMobile()
+
+    // ウィンドウサイズが変更された時にも判定を更新
+    window.addEventListener("resize", checkIsMobile)
+
+    // クリーンアップ関数
+    return () => window.removeEventListener("resize", checkIsMobile)
+  }, [])
+
   const scrollToNext = () => {
     const element = document.getElementById("philosophy")
     element?.scrollIntoView({ behavior: "smooth" })
   }
+
+  // 画面幅に応じてSplineのURLを出し分ける
+  const splineSceneUrl = isMobile
+    ? "https://prod.spline.design/hWQzfwU7zvUGJYXL/scene.splinecode" // ← SP版のURL
+    : "https://prod.spline.design/b4IBMd6TnUFXGVlT/scene.splinecode" // ← PC版のURL
 
   return (
     <section
       className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden"
       style={{ backgroundColor: "lab(98.26 0 0)" }}
     >
-      {/* 3D Background */}
+      {/* URLを変数（splineSceneUrl）に変更 */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <Spline
-          scene="https://prod.spline.design/b4IBMd6TnUFXGVlT/scene.splinecode"
-          onLoad={() => console.log("✅ Spline loaded successfully")}
-          onError={(e) => console.error("❌ Spline error:", e)}
-        />
+        <Spline scene={splineSceneUrl} />
       </div>
 
       {/* Gradient accent line */}
@@ -41,7 +61,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="max-w-4xl relative z-10 pointer-events-none">
+      <div className="max-w-4xl relative z-10 pointer-events-none select-none">
         {/* Tagline */}
         <p className="text-muted-foreground tracking-widest text-sm uppercase mb-6">
           UI/UX Designer & Web Engineer
