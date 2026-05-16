@@ -78,15 +78,15 @@ export function HeroSection() {
           >
             理論で設計し、
             <br />
-            コードで証明する。
+            共感で証明する。
           </span>
         </h1>
 
         {/* Sub description */}
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
-          実務経験5年以上の実装力と、人間中心設計（HCD）の学術的視点。
+          現場で培った確かな実装力と、人間中心設計（HCD）への深い洞察。
           <br className="hidden md:block" />
-          JAISTで研究を続けながら、エビデンスに基づいたデザインを実践しています。
+          大学院で経営と技術の両面を追究し、客観的な根拠とユーザーの共感を形にしています。
         </p>
 
         {/* Profile image area */}
