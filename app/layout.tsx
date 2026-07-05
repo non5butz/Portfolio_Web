@@ -17,7 +17,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio | UI/UX Designer & Web Engineer",
+  title: "Tsujita Nozomi Portfolio | UI/UX Designer & Web Engineer",
   description:
     "UI/UXデザイナー兼Webエンジニア。実務経験5年以上の実装力と人間中心設計（HCD）の学術的視点を持つ。",
   generator: "v0.app",
