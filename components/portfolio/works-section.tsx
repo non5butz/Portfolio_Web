@@ -9,6 +9,8 @@ const works = [
     description:
       "既存のブランド理念を継承したリデザインと実装を主導。ユーザビリティテストを実施し、客観的な根拠に基づく改善提案を行いました。",
     metrics: "2025 Renewal & New Brand Identity",
+    image: "/images/img-interactor.png",
+    image2x: "/images/img-interactor@2x.png",
   },
   {
     id: 2,
@@ -51,27 +53,43 @@ export function WorksSection() {
             >
               {/* Image placeholder */}
               <div
-                className={`aspect-4/3 rounded-lg flex items-center justify-center relative overflow-hidden ${
+                className={`aspect-4/3 rounded-lg flex items-center justify-center relative overflow-hidden bg-secondary/50 ${
                   index % 2 === 1 ? "md:order-2" : ""
                 }`}
-                style={{
-                  background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
-                  opacity: 0.15,
-                }}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm tracking-widest uppercase">
-                    Project Image
-                  </span>
-                </div>
+                {work.image ? (
+                  <img
+                    src={work.image}
+                    srcSet={work.image2x ? `${work.image} 1x, ${work.image2x} 2x` : undefined}
+                    alt={work.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <>
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
+                        opacity: 0.15,
+                      }}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-muted-foreground text-sm tracking-widest uppercase z-10">
+                        Project Image
+                      </span>
+                    </div>
+                  </>
+                )}
                 {/* Hover overlay */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                  style={{
-                    background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
-                  }}
-                >
-                  <ArrowUpRight className="w-8 h-8 text-white" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
+                      opacity: 0.2,
+                    }}
+                  />
+                  <ArrowUpRight className="w-8 h-8 text-white relative z-10" />
                 </div>
               </div>
 
