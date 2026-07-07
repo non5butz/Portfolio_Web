@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google"
+import { Geist, Geist_Mono, Noto_Serif_JP } from "next/font/google"
 import "./globals.css"
 
 const geist = Geist({
@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
 })
-const cormorant = Cormorant_Garamond({
+const notoSerifJP = Noto_Serif_JP({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-serif",
@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   title: "Tsujita Nozomi Portfolio | UI/UX Designer & Web Engineer",
   description:
     "UI/UXデザイナー兼Webエンジニア。実務経験5年以上の実装力と人間中心設計（HCD）の学術的視点を持つ。",
-  generator: "v0.app",
   icons: {
     icon: [
       {
@@ -48,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className="bg-background">
       <body
-        className={`${geist.variable} ${geistMono.variable} ${cormorant.variable} font-sans antialiased`}
+        className={`${geist.variable} ${geistMono.variable} ${notoSerifJP.variable} font-sans antialiased`}
       >
         {children}
       </body>
