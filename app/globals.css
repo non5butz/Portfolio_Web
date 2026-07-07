@@ -78,7 +78,7 @@
 @theme inline {
   --font-sans: var(--font-geist), 'Geist', 'Geist Fallback', sans-serif;
   --font-mono: var(--font-geist-mono), 'Geist Mono', 'Geist Mono Fallback', monospace;
-  --font-serif: var(--font-serif), 'Cormorant Garamond', serif;
+  --font-serif: var(--font-serif), 'Noto Serif JP', serif;
   --color-accent: var(--accent);
   --color-accent-secondary: var(--accent-secondary);
   --color-background: var(--background);
