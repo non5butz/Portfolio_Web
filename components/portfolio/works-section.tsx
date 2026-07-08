@@ -57,7 +57,7 @@ export function WorksSection() {
                   href={work.link}
                   target={work.link ? "_blank" : undefined}
                   rel={work.link ? "noopener noreferrer" : undefined}
-                  className={`aspect-4/3 rounded-lg flex items-center justify-center relative overflow-hidden bg-secondary/50 block ${
+                  className={`aspect-4/3 rounded-lg flex items-center justify-center relative overflow-hidden bg-secondary/50 ${
                     index % 2 === 1 ? "md:order-2" : ""
                   }`}
                 >
