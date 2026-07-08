@@ -10,7 +10,7 @@ const works = [
       "既存のブランド理念を継承したリデザインと実装を主導。ユーザビリティテストを実施し、客観的な根拠に基づく改善提案を行いました。",
     metrics: "2025 Renewal & New Brand Identity",
     image: "/images/img-interactor.png",
-    image2x: "/images/img-interactor@2x.png",
+    image2x: "/images/img-interactor2x.png",
   },
   {
     id: 2,
