@@ -107,10 +107,11 @@ export function HeroSection() {
           </div>
           <div>
             <p className="font-medium">Tsujita Nozomi</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs md:text-sm text-muted-foreground">
               HCD Specialist
-              <br className="hidden md:block" />
-              Master's Student Technology Management (MOT) at JAIST
+              <br className="md:block" />
+              Master's Student Technology <br className="block md:hidden" />
+              Management (MOT) at JAIST
             </p>
           </div>
         </div>
