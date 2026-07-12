@@ -7,13 +7,15 @@ export function ContactSection() {
         {/* Section header */}
         <p className="text-muted-foreground tracking-widest text-sm uppercase mb-4">Contact</p>
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-8 text-balance">
-          プロジェクトについて
+          ご縁をいただけましたら
           <br />
-          お聞かせください
+          幸いです
         </h2>
 
-        <p className="text-muted-foreground text-base max-w-4xl mx-auto mb-12 leading-relaxed">
-          新規プロダクトの設計、既存サービスの改善、研究協力など、 お気軽にご相談ください。
+        <p className="text-muted-foreground text-base max-w-2xl mx-auto mb-12 leading-relaxed text-pretty">
+          採用のご検討や、プロダクト設計・UX改善などのお仕事のご相談を承っております。
+          少しでもお力になれることがございましたら、まずはお気軽にご連絡ください。
+          一つひとつ、丁寧に対応させていただきます。
         </p>
 
         {/* Contact button */}
@@ -25,7 +27,7 @@ export function ContactSection() {
           }}
         >
           <Mail className="w-5 h-5" />
-          <span className="font-medium">メールで相談する</span>
+          <span className="font-medium">メールでご連絡する</span>
           <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </a>
 
