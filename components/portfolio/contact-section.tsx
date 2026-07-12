@@ -7,13 +7,13 @@ export function ContactSection() {
         {/* Section header */}
         <p className="text-muted-foreground tracking-widest text-sm uppercase mb-4">Contact</p>
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-8 text-balance">
-          プロジェクトについて
+          より良い体験を、
           <br />
-          お聞かせください
+          ご一緒に。
         </h2>
 
         <p className="text-muted-foreground text-base max-w-4xl mx-auto mb-12 leading-relaxed">
-          新規プロダクトの設計、既存サービスの改善、研究協力など、 お気軽にご相談ください。
+          新規プロダクトの設計、サービスの改善、研究協力など、 お気軽にご相談ください。
         </p>
 
         {/* Contact button */}

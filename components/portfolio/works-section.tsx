@@ -3,20 +3,20 @@ import { ArrowUpRight } from "lucide-react"
 const works = [
   {
     id: 1,
-    title: "楽天RAXY",
-    category: "Product website",
-    tags: ["Wireframe", "Style Guide", "Direction"],
+    title: "ワイモバイルオンラインストア",
+    category: "Commerce Platform",
+    tags: ["UI Design", "Design System", "DesignOps"],
     description:
-      "サービスサイトの全面リニューアルに伴い、情報設計、ワイヤーフレーム作成、スタイルガイドの策定を担当。ブランド体験と使いやすさの両立を目指しました。",
-    metrics: "Released in 2024 • Full Site Redesign",
-    image: "./images/img-RAXY.png",
-    image2x: "./images/img-RAXY@2x.png",
-    link: "https://raxy.rakuten.co.jp/",
+      "オンラインストアの契約フローを中心に、新規デザインシステムの構築とUI改善を担当。運用基盤を整備し、一貫性のあるユーザー体験の実現に取り組んでいます。",
+    metrics: "Building a Design System for a Commerce Platform",
+    image: "./images/img-ymobile.png",
+    image2x: "./images/img-ymobile@2x.png",
+    link: "https://www.ymobile.jp/",
   },
   {
     id: 2,
     title: "楽天RAXY",
-    category: "Product website",
+    category: "Product Website",
     tags: ["Wireframe", "Style Guide", "Direction"],
     description:
       "サービスサイトの全面リニューアルに伴い、情報設計、ワイヤーフレーム作成、スタイルガイドの策定を担当。ブランド体験と使いやすさの両立を目指しました。",
@@ -28,7 +28,7 @@ const works = [
   {
     id: 3,
     title: "株式会社Interactorコーポレートサイト",
-    category: "Corporate website",
+    category: "Corporate Website",
     tags: ["Wireframe", "UI Design", "WordPress"],
     description:
       "既存のブランド理念を継承したリデザインと実装を主導。プランニングからデザインおよびコーディング、WordPressの構築まで一貫して請け負いました。",
@@ -40,7 +40,7 @@ const works = [
   {
     id: 4,
     title: "株式会社音楽館コーポレートサイト",
-    category: "Corporate website",
+    category: "Corporate Website",
     tags: ["Wireframe", "UI Design", "WordPress"],
     description:
       "既存のブランド理念を継承したリデザインと実装を主導。プランニングからデザインおよびコーディング、WordPressの構築まで一貫して請け負いました。",
