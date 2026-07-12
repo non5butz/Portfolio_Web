@@ -9,6 +9,9 @@ const works = [
     description:
       "既存のブランド理念を継承したリデザインと実装を主導。ユーザビリティテストを実施し、客観的な根拠に基づく改善提案を行いました。",
     metrics: "2025 Renewal & New Brand Identity",
+    image: "./images/img-interactor.png",
+    image2x: "./images/img-interactor@2x.png",
+    link: "https://interactor.jp/",
   },
   {
     id: 2,
@@ -34,84 +37,110 @@ export function WorksSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="mb-16 md:mb-20">
-          <p className="text-muted-foreground tracking-widest text-sm uppercase mb-4">
-            Selected Works
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl font-medium text-balance">
-            厳選したプロジェクト
-          </h2>
+          <p className="text-muted-foreground tracking-widest text-sm uppercase mb-4">Works</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-balance">制作実績</h2>
         </div>
 
         {/* Works grid */}
         <div className="space-y-16 md:space-y-24">
-          {works.map((work, index) => (
-            <article
-              key={work.id}
-              className="group grid md:grid-cols-2 gap-8 md:gap-12 items-center"
-            >
-              {/* Image placeholder */}
-              <div
-                className={`aspect-4/3 rounded-lg flex items-center justify-center relative overflow-hidden ${
-                  index % 2 === 1 ? "md:order-2" : ""
-                }`}
-                style={{
-                  background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
-                  opacity: 0.15,
-                }}
+          {works.map((work, index) => {
+            const ImageWrapper = work.link ? "a" : "div"
+            const TitleWrapper = work.link ? "a" : "span"
+
+            return (
+              <article
+                key={work.id}
+                className="group grid md:grid-cols-2 gap-8 md:gap-12 items-center"
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm tracking-widest uppercase">
-                    Project Image
-                  </span>
-                </div>
-                {/* Hover overlay */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                  style={{
-                    background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
-                  }}
+                {/* Image placeholder */}
+                <ImageWrapper
+                  href={work.link}
+                  target={work.link ? "_blank" : undefined}
+                  rel={work.link ? "noopener noreferrer" : undefined}
+                  className={`aspect-4/3 rounded-lg flex items-center justify-center relative overflow-hidden bg-secondary/50 ${
+                    index % 2 === 1 ? "md:order-2" : ""
+                  }`}
                 >
-                  <ArrowUpRight className="w-8 h-8 text-white" />
-                </div>
-              </div>
+                  {work.image ? (
+                    <img
+                      src={work.image}
+                      srcSet={work.image2x ? `${work.image} 1x, ${work.image2x} 2x` : undefined}
+                      alt={work.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <>
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
+                          opacity: 0.15,
+                        }}
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-muted-foreground text-sm tracking-widest uppercase z-10">
+                          Project Image
+                        </span>
+                      </div>
+                    </>
+                  )}
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20">
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background: "linear-gradient(135deg, #5B90C4 0%, #E8BDB7 100%)",
+                        opacity: 0.2,
+                      }}
+                    />
+                    <ArrowUpRight className="w-8 h-8 text-white relative z-10" />
+                  </div>
+                </ImageWrapper>
 
-              {/* Content */}
-              <div className={index % 2 === 1 ? "md:order-1" : ""}>
-                {/* Category */}
-                <p className="text-sm text-muted-foreground mb-2">{work.category}</p>
+                {/* Content */}
+                <div className={index % 2 === 1 ? "md:order-1" : ""}>
+                  {/* Category */}
+                  <p className="text-sm text-muted-foreground mb-2">{work.category}</p>
 
-                {/* Title */}
-                <h3 className="font-serif text-2xl md:text-3xl mb-4 group-hover:opacity-70 transition-opacity">
-                  {work.title}
-                </h3>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {work.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground"
+                  {/* Title */}
+                  <h3 className="font-serif text-2xl md:text-3xl mb-4 group-hover:opacity-70 transition-opacity">
+                    <TitleWrapper
+                      href={work.link}
+                      target={work.link ? "_blank" : undefined}
+                      rel={work.link ? "noopener noreferrer" : undefined}
                     >
-                      {tag}
-                    </span>
-                  ))}
+                      {work.title}
+                    </TitleWrapper>
+                  </h3>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {work.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-3 py-1 rounded-full bg-secondary text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground leading-relaxed mb-6">{work.description}</p>
+
+                  {/* Metrics */}
+                  <p
+                    className="font-mono text-sm bg-clip-text text-transparent"
+                    style={{
+                      backgroundImage: "linear-gradient(90deg, #5B90C4 0%, #E8BDB7 100%)",
+                    }}
+                  >
+                    {work.metrics}
+                  </p>
                 </div>
-
-                {/* Description */}
-                <p className="text-muted-foreground leading-relaxed mb-6">{work.description}</p>
-
-                {/* Metrics */}
-                <p
-                  className="font-mono text-sm bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage: "linear-gradient(90deg, #5B90C4 0%, #E8BDB7 100%)",
-                  }}
-                >
-                  {work.metrics}
-                </p>
-              </div>
-            </article>
-          ))}
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>

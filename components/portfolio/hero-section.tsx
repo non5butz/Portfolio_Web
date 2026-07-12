@@ -61,7 +61,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="max-w-4xl relative z-10 pointer-events-none select-none">
+      <div className="max-w-5xl relative z-10 pointer-events-none select-none">
         {/* Tagline */}
         <p className="text-muted-foreground tracking-widest text-sm uppercase mb-6">
           UI/UX Designer & Web Engineer
@@ -69,24 +69,26 @@ export function HeroSection() {
 
         {/* Main catchphrase */}
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8">
-          <span className="block">Design with Evidence.</span>
           <span
             className="block bg-clip-text text-transparent mt-2"
             style={{
               backgroundImage: "linear-gradient(90deg, #5B90C4 0%, #E8BDB7 100%)",
             }}
           >
-            理論で設計し、
+            より良い体験を、
             <br />
-            共感で証明する。
+            一歩ずつ。
           </span>
+          <span className="text-3xl lg:text-[42px] mt-4 block">Designing Better Experiences.</span>
         </h1>
 
         {/* Sub description */}
-        <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
-          現場で培った確かな実装力と、人間中心設計（HCD）への深い洞察。
+        <p className="text-muted-foreground text-sm max-w-4xl leading-relaxed mb-12">
+          人間中心設計（HCD）の考え方を軸に、
           <br className="hidden md:block" />
-          大学院で経営と技術の両面を追究し、客観的な根拠とユーザーの共感を形にしています。
+          UI/UX設計やWebディレクション、デザインシステムの構築に取り組んできました。
+          <br className="hidden md:block" />
+          営業やマーケティングの経験も生かしながら、人・事業・技術をつなぐプロダクトづくりを目指しています。
         </p>
 
         {/* Profile image area */}
@@ -105,7 +107,12 @@ export function HeroSection() {
           </div>
           <div>
             <p className="font-medium">Tsujita Nozomi</p>
-            <p className="text-sm text-muted-foreground">JAIST 修士課程 / HCD研究</p>
+            <p className="text-xs md:text-sm text-muted-foreground">
+              HCD Specialist
+              <br className="md:block" />
+              Master's Student Technology <br className="block md:hidden" />
+              Management (MOT) at JAIST
+            </p>
           </div>
         </div>
       </div>
