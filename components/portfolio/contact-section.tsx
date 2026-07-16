@@ -18,14 +18,15 @@ export function ContactSection() {
 
         {/* Contact button */}
         <a
-          href="mailto:your@email.com"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeyD4Y9-jSv0laFG0DnqtpNz15GO2hqysOyaL23s_F5a8nNuw/viewform?usp=dialog"
+          target="_blank"
           className="inline-flex items-center gap-3 px-8 py-4 rounded-full text-white transition-all hover:scale-105 hover:shadow-lg group"
           style={{
             background: "linear-gradient(90deg, #5B90C4 0%, #E8BDB7 100%)",
           }}
         >
           <Mail className="w-5 h-5" />
-          <span className="font-medium">メールでご連絡する</span>
+          <span className="font-medium">メールで連絡する</span>
           <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </a>
 
